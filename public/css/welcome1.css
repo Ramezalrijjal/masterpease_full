@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+p {
+    color: #333;
+    font-size: 18px;
+}
+#note{
+    color: red;
+    font-size: xx-large;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+.back-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+}
+#reservation{
+    font-size: xx-large;
+    color: #0fa426;
+}
