@@ -12,19 +12,21 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('tours', function (Blueprint $table) {
-            $table->id();
-            $table->string('service_id');
-            $table->string('name');
-            $table->string('description');
-            $table->string('image');
-            $table->string('price');
-            $table->dateTime('Tour Date');
-            $table->string('address');
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('tours', function (Blueprint $table) {
+        $table->id();
+        $table->unsignedBigInteger('service_id'); 
+        $table->string('name');
+        $table->string('description');
+        $table->string('image');
+        $table->string('price');
+        $table->dateTime('Tour Date');
+        $table->string('address');
+        $table->timestamps();
+
+        $table->foreign('service_id')->references('id')->on('services');
+    });
+}
 
     /**
      * Reverse the migrations.

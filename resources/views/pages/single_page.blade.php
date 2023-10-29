@@ -7,7 +7,39 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+
+    <!-- Libraries Stylesheet -->
+    {{-- <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" /> --}}
+    <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+<link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+<link href="{{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    {{-- <link href="css/bootstrap.min.css" rel="stylesheet"> --}}
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+    <!-- Template Stylesheet -->
+    {{-- <link href="css/style.css" rel="stylesheet"> --}}
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -65,7 +97,8 @@
             padding: 5px;
         }
     .hero-header {
-      background: url('path-to-your-image.jpg') no-repeat center;
+
+      
       background-size: cover;
     }
   </style>
@@ -125,21 +158,25 @@
   </div>
   <div class="container">
     <div class="gallery">
-      <img src="../travel-agency-html-template/img/path-18197_1280.jpg" alt=" 1">
-      <img src="../travel-agency-html-template/img/swietokrzyskie-mountains-2842785_1280.jpg" alt=" 2">
-      <img src="../travel-agency-html-template/img/zipline-168019_1280.jpg" alt=" 3">
-      <img src="../travel-agency-html-template/img/zipline-168019_1280.jpg" alt=" 3">
-      <img src="../travel-agency-html-template/img/zipline-168019_1280.jpg" alt=" 3">
-      <img src="../travel-agency-html-template/img/zipline-168019_1280.jpg" alt=" 3">
+   
+          
+      
+      <img src="/images/{{$singeservis->image}}" alt=" 1">
+      <img src="/images/{{$singeservis->image}}" alt=" 2">
+      <img src="/images/{{$singeservis->image}}" alt=" 3">
+      <img src="/images/{{$singeservis->image}}" alt=" 3">
+      <img src="/images/{{$singeservis->image}}" alt=" 3">
+      <img src="/images/{{$singeservis->image}}" alt=" 3">
     </div>
     <div class="details">
-      <h2>jarash</h2>
-      <p>    From golden sandy beaches to towering mountains, our region offers a diverse range of places and activities to cater to all your interests."</p>
-      <p>12.00 jd</p>
+      <h2>{{$singeservis->name}} </h2>
+      <p>  {{$singeservis->description}}  </p>
+      <p>{{$singeservis->price}}</p>
       <p>Trip Dates: From January 1st to January 10th, 2024</p>
-      <a href="index.html" class="btn">Back to Homepage </a>
-      <a href="booking.html" class="btn"> Booknow</a>
+      <a href="{{route('home')}}" class="btn">Back to Homepage </a>
+      <a href="{{route('booking',$singeservis->id)}}" class="btn"> Booknow</a>
     </div>
   </div>
+ 
 </body>
 </html>

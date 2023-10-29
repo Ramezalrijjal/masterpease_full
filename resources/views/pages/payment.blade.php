@@ -13,7 +13,7 @@
 <body>
     <div class="wrapper">
         <h2>Payment Form</h2>
-        <form method="POST">
+        <form method="get" action="{{route('thanks')}}">
             <h4>Account</h4>
             <div class="input-group">
                 <div class="input-box">
@@ -68,14 +68,26 @@
                 </div>
                 <div class="input-box">
                     <select>
-                        <option>01 jun</option>
-                        <option>02 jun</option>
-                        <option>03 jun</option>
+                        <option>01 jan</option>
+                        <option>02 feb</option>
+                        <option>03 mar</option>
+                        <option>04 mar</option>
+                        <option>05 apr</option>
+                        <option>06 may</option>
+                        <option>07 jun</option>
+                        <option>08 jul</option>
+                        <option>09 sep</option>
+                        <option>10 oct</option>
+                        <option>11 nov</option>
+                        <option>12 dec</option>
+                        
                     </select>
                     <select>
-                        <option>2020</option>
-                        <option>2021</option>
-                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
                     </select>
                 </div>
             </div>

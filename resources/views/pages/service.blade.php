@@ -26,7 +26,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}"  rel="stylesheet">
@@ -123,11 +123,38 @@
                 <h1 class="mb-5">Our Services</h1>
             </div>
             <div class="row g-4">
+
+                @foreach ($services as $item)
                 <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
+                            <a href="single_page/{{$item->id}}">
+                                <img id="ser1" src="/images/{{$item->image}}" alt="image" style="width: 400px;
+                                height: 300px;">
+                            </a>
+                            <h5>{{$item->name}}</h5>
+                            <p>{{$item->description}}</p>
+                            <p>{{$item->price}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+
+
+
+
+
+
+
+
+
+
+
+                {{-- <div class="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
                             <a href="Agricultural Tourism.html">
-                                <img id="ser1" src="../travel-agency-html-template/img/swietokrzyskie-mountains-2842785_1280.jpg" alt="">
+                                <img id="ser1" src="img/swietokrzyskie-mountains-2842785_1280.jpg" alt="">
                             </a>
                             <h5>Agricultural tourism</h5>
                             <p>Enjoying peace and quiet: Peace and tranquility are among the attractive aspects of agricultural tourism. The rural environment offers visitors an opportunity to relax and get away from the hustle and bustle of urban life and busy everyday experiences...</p>
@@ -138,13 +165,16 @@
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
                             <a href="Recreational tourism.html">
-                                <img id="ser2" src="../travel-agency-html-template/img/zipline-168019_1280.jpg" alt="">
+                                <img id="ser2" src="img/zipline-168019_1280.jpg" alt="">
                             </a>
                             <h5>Recreational tourism</h5>
                             <p>Recreation and entertainment: In addition to agricultural activities, recreational and entertainment events can be organized for visitors such as concerts, folk performances, and local celebrations. These events add an atmosphere of fun and joy to the visitors' experience..</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+
+
+                
             </div>
         </div>
     </div>

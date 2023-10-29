@@ -139,7 +139,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div class="tour-card">
+                {{-- <div class="tour-card">
                     <img src="../travel-agency-html-template/img/Agricultural Tourism/andreas-weilguny-vGHQ8yt8lhY-unsplash.jpg" alt="Tour 1" class="tour-image">
                     <div class="tour-details">
                         <h2 class="tour-title">Organic Farm Experience</h2>
@@ -147,7 +147,23 @@
                         <p class="tour-price">$50 per person</p>
                         <a href="single_page.html" class="tour-button">Book Now</a>
                     </div>
-                </div>
+                </div> --}}
+
+
+                <!-- resources/views/tours/index.blade.php -->
+
+@foreach ($pages as $Agricultural )
+<div class="tour-card">
+    <img src="{{ $services->image }}" alt="Tour {{ $tour->id }}" class="tour-image">
+    <div class="tour-details">
+        <h2 class="tour-title">{{ $services->title }}</h2>
+        <p class="tour-description">{{ $services->description }}</p>
+        <p class="tour-price">${{ $services->price }} per person</p>
+        <a href="single_page.html" class="tour-button">Book Now</a>
+    </div>
+</div>
+@endforeach
+
             </div>
             <div class="col-md-6">
                 <div class="tour-card">
